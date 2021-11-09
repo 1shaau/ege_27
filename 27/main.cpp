@@ -19,13 +19,16 @@ void number_of_products_div() /// number of products dividable by 55
     for (int i(0); i<n; i++)
         cin >> numbers[i];
 
-    for(int j(0); j<n; j++)
+    int good_pairs(0);
+
+    for(int j(0); j<n-1; j++)
         for (int i(j+1); i<n; i++)
         {
             int cur_prod(numbers[j]*numbers[i]);
             if (cur_prod%55 == 0)
-                cout << cur_prod << endl;
+                good_pairs++;
         }
+    cout << good_pairs << endl;
 }
 
 int main()
