@@ -17,9 +17,13 @@ void number_of_products_div() /// number of products dividable by 55
   cin >> n;
   for (int i(0); i<n; i++)
   {
-     cin >> cur;
-     cout << '\t' << cur << endl;
+    cin >> cur;
+    if (cur%55==0) n55++;
+    else if (cur%11==0) n11++;
+    else if (cur%5==0) n5++;
   }
+  no = n - n55 - n5 - n11;
+  cout << n55*n5 + n55*n11 + n55*no + n55*(n55-1)/2 + n5*n11 << endl;
 }
 
 int main()
