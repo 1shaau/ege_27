@@ -8,7 +8,7 @@ void number_of_products_div() /// number of products dividable by 55
 {
      /**
     1. считать и запомнить все числа +
-    2. вывести все пары чисел
+    2. вывести все пары чисел +
     3. вместо пар вывести произведения
     4. проверить делимость
     5. посчитать и вывести кол-во подходящих произведений
@@ -21,7 +21,7 @@ void number_of_products_div() /// number of products dividable by 55
 
     for(int j(0); j<n; j++)
         for (int i(j+1); i<n; i++)
-            cout << numbers[j] << ' ' << numbers[i] << endl;
+            cout << numbers[j]*numbers[i] << endl;
 }
 
 int main()
