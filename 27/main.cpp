@@ -19,7 +19,11 @@ void max_sum_div()
     cin >> numbers[i];
   for(int j(0); j<n; j++)
     for (int i(j+1); i<n; i++)
-        cout << numbers[j]+numbers[i] << endl;
+    {
+      int cur_prod(numbers[j]+numbers[i]);
+      if (cur_prod%2 == 1)
+        cout << cur_prod << endl;
+    }
 }
 
 int main()
