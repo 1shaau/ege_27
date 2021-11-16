@@ -8,7 +8,7 @@ void max_sum_div()
     /**
     1. считать и сохранить все числа +
     2. вывести все пары +
-    3. вместо пары вывести суммы
+    3. вместо пары вывести суммы +
     4. проверить делмость суммы
     5. вывести только наибольшую сумму
     */
@@ -19,7 +19,7 @@ void max_sum_div()
     cin >> numbers[i];
   for(int j(0); j<n; j++)
     for (int i(j+1); i<n; i++)
-        cout << numbers[j] << ' ' << numbers[i] << endl;
+        cout << numbers[j]+numbers[i] << endl;
 }
 
 int main()
