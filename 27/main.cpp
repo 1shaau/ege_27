@@ -17,17 +17,23 @@ void min_sum_distance()
     1. считать числа +
     2. вывести пары +
     3. вывести пары с минимальным расстоянием +
-    4. вместо вывода пары посчитать сумму
+    4. вместо вывода пары посчитать сумму +
     5. найти минимум среди сумм
     **/
   int n(0);
+  int max_sum(1001);
   cin >> n;
   vector<int> numbers(n);
   for (int i(0); i<n; i++)
     cin >> numbers[i];
   for(int j(0); j<n; j++)
     for (int i(j+4); i<n; i++)
-        cout << numbers[j] + numbers[i] << endl;
+  {
+      int cur_sum(numbers[i]+numbers[j]);
+      if (cur_sum < max_sum)
+          max_sum = cur_sum;
+  }
+cout << max_sum << endl;
 }
 
 int main()
